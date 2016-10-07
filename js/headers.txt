@@ -1,0 +1,19 @@
+<title>Path</title>
+
+<!-- Latest compiled and minified CSS & JS -->
+<link rel="stylesheet" href="/static/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="/static/bootstrap-material-design/dist/bootstrap-material-design.min.css">
+<link rel="stylesheet" href="/css/style.css">
+
+<script src="/static/jquery/dist/jquery.js"></script>
+<script src="/static/jquery-ui-1.12.1/jquery-ui.js"></script>
+<script src="/static/packery/dist/packery.pkgd.min.js"></script>
+<script src="/static/tether/dist/js/tether.js"></script>
+<script src="/static/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/static/underscore/underscore.js"></script>
+
+<script src="js/location.seed.js"></script>
+<script src="js/data.seed.js"></script>
+<script src="js/tools.seed.js"></script>
+
+<!--  seed  information -->

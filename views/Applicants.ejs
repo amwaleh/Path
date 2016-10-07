@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <% include ./partials/header %>
+
+</head>
+
+<body>
+    <div class="container">
+<div class="content">
+        <div class="jumbotron">
+            <div class="container">
+                <a class="btn btn-primary btn-lg">Applicants information</a>
+                </p>
+            </div>
+        </div>
+        <div class="card col-lg-8 offset-lg-2">
+            <table cellpadding="1" cellspacing="1" class="table  table-hover info">
+                <tr>
+                    <th>id</th>
+                    <th>Name</th>
+                    <th>Location</th>
+                    <th>Cycle</th>
+                </tr>
+                <tbody class='seed'>
+                    <script id="entry-template" type="text/x-handlebars-template">
+                        {{#each seedData}}
+                        <tr>
+                            <td>{{this.id}}</td>
+                            <td><a href="/candidate">{{this.Name}}</a></td>
+                            <td>{{this.location}}</td>
+                            <td>{{this.class}}</td>
+                            {{/each}}
+                        </tr>
+                    </script>
+                    </<tbody>
+            </table>
+        </div>
+    </div>
+</div>
+  </body>
+  </html>

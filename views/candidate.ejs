@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <% include ./partials/header %>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="content">
+
+            <div class="jumbotron">
+                <div class="container">
+                    <a class="btn btn-primary btn-lg">Candidate information</a>
+                    </p>
+                </div>
+            </div>
+            <div class="card col-lg-8 offset-lg-2" style="padding:100px 0 30px 30px;">
+                <div class="pull-left" >
+                    <img src="https://randomuser.me/api/portraits/women/89.jpg" class="img-cir0cle thumbn center" alt="">
+                </div>
+
+                <div class="pull-left col-lg-8">
+                    <table class="table table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th colspan=2 >parry pat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Cycle</td>
+                                <td>15 </td>
+                            </tr>
+                            <tr>
+                                <td>email</td>
+                                <td><a href="mailto:#">geo@email.com</a></td>
+
+                            </tr>
+                            <tr>
+                                <td>linkedin</td>
+                                <td><a href="linkdin:#">linkedin</a></td>
+                            </tr>
+                            <tr>
+                                <td>Location</td>
+                                <td>Lagos, Nigeria</td>
+                            </tr>
+                            <tr>
+                            <tr>
+                                <td>Education</td>
+                                <td>University: Lagos International University <br> Bsc CS</td>
+                            </tr>
+                            <tr>
+                                <td>Previous Invitations</td>
+                                <td>
+
+                                  <ul class="list-group">
+                                    <li class="list-group-item"><a href="#"> Cycle 12</a></li>
+                                    <li class="list-group-item"><a href="#"> Cycle 10</a></li>
+                                    <li class="list-group-item"><a href="#"> Cycle 9</a></li>
+                                  </ul>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+
+    <div class="list-group col-lg-8 offset-lg-2  card" style="margin-bottom:10px">
+      <a href="#" class="list-group-item active">
+    applicant activity
+      </a>
+      <table class="table table-hover table-stripped">
+    	<thead>
+    		<tr>
+    			<th>stage</th>
+    			<th>started</th>
+          <th>completed</th>
+    			<th>tools</th>
+
+
+    		</tr>
+    	</thead>
+    	<tbody>
+    		<tr>
+    			<td>stage 1</td>
+    			<td>closed</td>
+          		<td>80%</td>
+    			<td>plumtest</td>
+
+    		</tr>
+    		<tr>
+    			<td>stage 2</td>
+    			<td>in progress</td>
+          		<td>10%</td>
+    			<td>proctor, hackerank</td>
+    		</tr>
+        <tr>
+    			<td>stage 3</td>
+    			<td>not Started</td>
+          		<td>0%</td>
+    			<td>Andela, proctor</td>
+    		</tr>
+    	</tbody>
+    </table>
+    </div>
+
+    <div class="list-group col-lg-8 offset-lg-2 card tool ">
+      <a href="#" class="list-group-item active ">
+    Tool analysis
+      </a>
+      <table class="table table-hover table-stripped">
+    	<thead >
+    		<tr>
+    			<th style="text-align:left">Tool</th>
+    			<th style="text-align:left">Score</th>
+
+
+
+    		</tr>
+    	</thead>
+    	<tbody>
+    		<tr>
+    			<td>proctor</td>
+    			<td>100</td>
+
+    		</tr>
+    		<tr>
+    			<td>Andelabs</td>
+    			<td>100</td>
+
+    		</tr>
+        <tr>
+    			<td>plumtest</td>
+    			<td>40</td>
+
+    		</tr>
+    	</tbody>
+    </table>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+    <script>
+        $.ajax({
+            url: 'https://randomuser.me/api/',
+            dataType: 'json',
+            success: function(data) {
+                var pic = data.results[0].picture.large
+                console.log(pic);
+                $('.thumbn').attr('src', pic)
+
+            }
+        });
+    </script>
+</body>
+
+</html>

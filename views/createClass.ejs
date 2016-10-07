@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ./partials/header %>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="content">
+            <div>
+                <div class="jumbotron">
+                    <div class="container">
+                        <a class="btn btn-primary btn-lg">Create Cycle </a>
+                        </p>
+                    </div>
+                </div>
+                <form action="/tools" method="get" role="form" class="col-lg-6 offset-lg-3 card">
+                    <legend style="text-align:center;color:#139e91"><h2><i class="fa fa-stumbleupon-circle fa-5x" aria-hidden="true"></i></h2></legend>
+
+                    <div class="form-group">
+                        <label for="inputtext" class="col-md-2 control-label">Cycle Name</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="inputtext" placeholder="Cohort">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputtext" class="col-md-2 control-label">start date</label>
+                        <div class="col-md-10">
+                            <input type="date" class="form-control" id="inputtext" placeholder="Cohort">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputtext" class="col-md-2 control-label">End date</label>
+                        <div class="col-md-10">
+                            <input type="date" class="form-control" id="inputtext" placeholder="Cohort">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="select222" class="col-md-2 control-label">Location</label>
+                        <div class="col-md-10">
+                            <select id="select222" class="form-control">
+                                <option value="">-- Select Country --</option>
+                                <option value="Kenya">kenya</option>
+                                <option value="UGANDA"> uganda </option>
+                                <option value="Nigeria">Nigeria</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="target" class="col-md-2 control-label">Target</label>
+                        <div class="col-md-10">
+                            <input type="number" class="form-control" id="target" min="1" placeholder="Target">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="target" class="col-md-2 control-label">Role</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="target" min="1" placeholder="Fellow, FIR, TTL etc">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-raised btn-success pull-right">Next</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>

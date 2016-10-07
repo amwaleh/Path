@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)http://0.0.0.0:3000/tools -->
+<html lang="en" class="gr__0_0_0_0"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Path</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="./Path_files/bootstrap.min.css">
+
+    <link rel="stylesheet" href="./Path_files/style.css">
+    <script src="./Path_files/jquery.min.js"></script>
+<script src="./Path_files/jquery-ui.js"></script>
+    <script src="./Path_files/jquery.js"></script>
+    <script src="./Path_files/jquery-ui(1).js"></script>
+
+
+    <script src="./Path_files/packery.pkgd.min.js"></script>
+    <script src="./Path_files/tether.js"></script>
+    <script src="./Path_files/bootstrap.min.js"></script>
+    <script src="./Path_files/underscore.js"></script>
+<!--  seed  information -->
+    <script src="./Path_files/location.seed.js"></script>
+    <script src="./Path_files/data.seed.js"></script>
+        <script src="./Path_files/tools.seed.js"></script>
+    <!--  handlebars-->
+    <script src="./Path_files/handlebars.min.js"></script>
+   <script src="./Path_files/app.js"></script>
+
+   <script>
+   $(function(){
+      $('#draggable').draggable();
+   $('#droppable').droppable({
+     drop: function(event, ui){
+       $(this)
+       .addclass("ui-state-highlight")
+       .find('p')
+       .html("dropped");
+     }})})
+   </script>
+    <style>
+    #draggable{
+      width:120px;
+      height:120px;
+
+    }
+    #droppable{
+      width:120px;
+      height:120px;
+    }
+    .thumbnail {
+      width: 60px;
+      height: 60px;
+      border: 1px rgba(35, 111, 13, 0.32) solid;
+      box-shadow: 1px 1px 2px rgba(35, 111, 13, 0.9);
+      transform: translate(0,-20px);
+  }
+        .tools {
+            background-color: rgba(192, 197, 194, 0.16);
+
+        }
+
+        .grid-item {
+    margin: 5px;
+    width: 120px;
+    height: 120px;
+    font-size: 10px;
+    box-shadow: 1px 1px 1px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 12px;
+}
+
+        .grid-item--width2 {
+            background-color: #cfc;
+            ;
+        }
+        .packery-drop-placeholder {
+  outline: 2px dashed #4c4;
+  outline-offset: -6px;
+  /* transition position changing */
+  -webkit-transition: -webkit-transform 0.2s;
+          transition: transform 0.2s;
+}
+.cat{
+  width:100%;
+height:30px;
+
+}
+    </style>
+
+</head>
+
+<body data-gr-c-s-loaded="true">
+  <nav class="navbar  navbar-light bg-faded">
+      <a class="navbar-brand" href="http://0.0.0.0:3000/tools#">Paths</a>
+      <a class="navbar-brand" href="http://0.0.0.0:3000/cohort.html">weeks</a>
+
+  </nav>
+
+  <div class="container">
+    <div class="content">
+
+      <div>
+          <div class="jumbotron">
+              <div class="container">
+                  <a class="btn btn-primary btn-lg">recruitment </a>
+                  <p></p>
+              </div>
+          </div>
+          
+      </div>
+      <div id="draggable" class="ui-state-highlight"><p>Drag me</p></div>
+      <div id="droppable" class="ui-state-highlight"><p>Drop me</p></div>
+      <div>
+        <div class="gridp ui-state-highlight" id="droppable" style="height: 0px; background-color: yellow; margin: 200px; position: relative;">
+          drop
+
+        </div>
+
+
+    <div class="card  col-lg-8 tools">
+      <div class="col-lg-12 category">
+      <h4>  Technical</h4>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo5.jpeg" alt="logo5.jpeg" class="thumbnail img-circle">
+
+          <p>Proctor </p><br><button>add</button>
+        </div>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo5.jpeg" alt="logo5.jpeg" class="thumbnail img-circle">
+
+          <p>codewars </p><br><button>add</button>
+        </div>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo1.jpeg" alt="logo1.jpeg" class="thumbnail img-circle">
+
+          <p>plural </p><br><button>add</button>
+        </div>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo1.jpeg" alt="logo1.jpeg" class="thumbnail img-circle">
+
+          <p>proctor </p><br><button>add</button>
+        </div>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo4.jpeg" alt="logo4.jpeg" class="thumbnail img-circle">
+
+          <p>codewars </p><br><button>add</button>
+        </div>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo4.jpeg" alt="logo4.jpeg" class="thumbnail img-circle">
+
+          <p>Proctor </p><br><button>add</button>
+        </div>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo5.jpeg" alt="logo5.jpeg" class="thumbnail img-circle">
+
+          <p>Proctor </p><br><button>add</button>
+        </div>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo2.jpeg" alt="logo2.jpeg" class="thumbnail img-circle">
+
+          <p>hackerank </p><br><button>add</button>
+        </div>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo5.jpeg" alt="logo5.jpeg" class="thumbnail img-circle">
+
+          <p>plumtest </p><br><button>add</button>
+        </div>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo3.jpeg" alt="logo3.jpeg" class="thumbnail img-circle">
+
+          <p>hackerank </p><br><button>add</button>
+        </div>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo5.jpeg" alt="logo5.jpeg" class="thumbnail img-circle">
+
+          <p>proctor </p><br><button>add</button>
+        </div>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo4.jpeg" alt="logo4.jpeg" class="thumbnail img-circle">
+
+          <p>plural </p><br><button>add</button>
+        </div>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo1.jpeg" alt="logo1.jpeg" class="thumbnail img-circle">
+
+          <p>hackerank </p><br><button>add</button>
+        </div>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo3.jpeg" alt="logo3.jpeg" class="thumbnail img-circle">
+
+          <p>proctor </p><br><button>add</button>
+        </div>
+        </div>
+
+      <div class="col-lg-12 category">
+      <h4>  softskill</h4>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo1.jpeg" alt="logo1.jpeg" class="thumbnail img-circle">
+
+          <p>proctor </p><br><button>add</button>
+        </div>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo2.jpeg" alt="logo2.jpeg" class="thumbnail img-circle">
+
+          <p>plumtest </p><br><button>add</button>
+        </div>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo4.jpeg" alt="logo4.jpeg" class="thumbnail img-circle">
+
+          <p>plumtest </p><br><button>add</button>
+        </div>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo4.jpeg" alt="logo4.jpeg" class="thumbnail img-circle">
+
+          <p>plural </p><br><button>add</button>
+        </div>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo5.jpeg" alt="logo5.jpeg" class="thumbnail img-circle">
+
+          <p>hackerank </p><br><button>add</button>
+        </div>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo2.jpeg" alt="logo2.jpeg" class="thumbnail img-circle">
+
+          <p>plumtest </p><br><button>add</button>
+        </div>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo2.jpeg" alt="logo2.jpeg" class="thumbnail img-circle">
+
+          <p>hackerank </p><br><button>add</button>
+        </div>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo4.jpeg" alt="logo4.jpeg" class="thumbnail img-circle">
+
+          <p>Proctor </p><br><button>add</button>
+        </div>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo3.jpeg" alt="logo3.jpeg" class="thumbnail img-circle">
+
+          <p>plumtest </p><br><button>add</button>
+        </div>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo5.jpeg" alt="logo5.jpeg" class="thumbnail img-circle">
+
+          <p>plural </p><br><button>add</button>
+        </div>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo2.jpeg" alt="logo2.jpeg" class="thumbnail img-circle">
+
+          <p>codewars </p><br><button>add</button>
+        </div>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo3.jpeg" alt="logo3.jpeg" class="thumbnail img-circle">
+
+          <p>codewars </p><br><button>add</button>
+        </div>
+        </div>
+
+      <div class="col-lg-12 category">
+      <h4>  Interpersonal</h4>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo2.jpeg" alt="logo2.jpeg" class="thumbnail img-circle">
+
+          <p>hackerank </p><br><button>add</button>
+        </div>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo2.jpeg" alt="logo2.jpeg" class="thumbnail img-circle">
+
+          <p>hackerank </p><br><button>add</button>
+        </div>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo3.jpeg" alt="logo3.jpeg" class="thumbnail img-circle">
+
+          <p>Proctor </p><br><button>add</button>
+        </div>
+        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
+          <img src="./Path_files/logo1.jpeg" alt="logo1.jpeg" class="thumbnail img-circle">
+
+          <p>Proctor </p><br><button>add</button>
+        </div>
+        </div>
+
+      <script>
+      $(document).ready(function(){
+    function add(){
+        $('.element>button').on('click',function(){
+          console.log(this.find('p'));
+        })z
+}})
+</script></div>
+    </div>
+</div>
+
+
+
+    <script>
+    // initialize Packery
+    var $grid = $('.gridp').packery({
+      itemSelector: '.grid-item',
+      // columnWidth helps with drop positioning
+      columnWidth: 100
+    });
+
+    // make all items draggable
+    var $items = $grid.find('.grid-item').draggable();
+    // bind drag events to Packery
+    $grid.packery( 'bindUIDraggableEvents', $items );
+    function orderItems() {
+  var itemElems = $grid.packery('getItemElements');
+  $( itemElems ).each( function( i, itemElem ) {
+      $( itemElem).find('p').text( i + 1 );
+  });
+}
+
+$grid.on( 'layoutComplete', orderItems );
+$grid.on( 'dragItemPositioned', orderItems );
+    </script>
+
+
+
+
+</div></body></html>

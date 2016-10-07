@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <% include ./partials/header %>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="jumbotron">
+          <div class="container">
+              <a class="btn btn-primary btn-lg">Tools Description</a>
+              </p>
+          </div>
+      </div>
+
+<div class="card col-lg-12">
+  <div class="thumb col-lg-4 "><img src="/images/logo6.png" alt="" ></div>
+  <div class="description col-lg-8">
+    <div class="source">To add a tool click the add button and fill in the requirements.</div>
+    <div class="source">A plugin script must have been already loaded for the tool to work properly</div>
+    <button type="button" class="btn-success btn-lg " data-toggle="modal" data-target="#myModal">
+      add tool
+    </button>
+
+
+
+     </div>
+
+</div>
+
+<div class="col-lg-12 card">
+<h2 style="text-align:center; margin:10px">Installed tools</h2>
+<div class=" col-lg-12 tools">
+    <script id="tools-template" type="text/x-handlebars-template">
+      {{#each tool}}
+
+        {{#each this}}
+        <div class="card  col-lg-8 offset-lg-2">
+
+          <div class="thumb col-lg-4"><img src="images/{{this.profile}}"  class="thumbnail img-circle" width="100%">
+              <div ><p class="toolsheader">{{this.Tools}} </p></a></div>
+          </div>
+
+          <div class="description col-lg-8">
+            <p>{{this.Description}}</p>
+        <div class="source"> <i class="fa fa-plug" aria-hidden="true"></i> source: <a href="">{{this.Site}}</a></div>
+        <div class="source"><i class="fa fa-tags" aria-hidden="true"></i> Tags: technical, softskill {{this.skill}}</div>
+        <div class="">
+        <a href=""> <i class="fa fa-bar-chart" aria-hidden="true"></i> useage</a>
+
+        </div>
+             </div>
+
+        </div>
+        {{/each}}
+
+
+
+      {{/each}}
+
+        </script>
+</div>
+</div>
+
+
+
+
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Add Plugin</h4>
+      </div>
+      <div class="modal-body">
+        <form action="/tools" method="GET" role="form">
+
+    <div class="form-group">
+  		<input type="file" class="form-control" id="" placeholder="plugin name">
+  	</div>
+
+  	<div class="form-group">
+  		<input type="text" class="form-control" id="" placeholder="plugin name">
+  	</div>
+
+  	<div class="form-group">
+  		<input type="text" class="form-control" id="" placeholder="tags">
+  	</div>
+
+  	<div class="form-group">
+  		<input type="text" class="form-control" id="" placeholder="source">
+  	</div>
+    <fieldset class="form-group">
+      <label for="exampleSelect1">Example select</label>
+      <select class="form-control" id="exampleSelect1">
+        <option>hacker rankk</option>
+        <option> plumetes</option>
+        <option>creations</option>
+        <option>motivations</option>
+        <option>new tool</option>
+      </select>
+    </fieldset>
+
+  	<div class="form-group">
+  		<input type="text" class="form-control" id="" placeholder="description">
+  	</div>
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">add plugin</button>
+
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+    </div>
+  </div>
+</body>
+</html >

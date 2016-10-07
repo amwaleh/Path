@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Path</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="static/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/bootstrap-material-design/dist/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="static/jquery/dist/jquery.js"></script>
+    <script src="js/location.seed.js"></script>
+    <script src="js/data.seed.js"></script>
+    <script src="js/tools.seed.js"></script>
+    <script src="static/handlebars/handlebars.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="static/tether/dist/js/tether.js"></script>
+    <script src="static/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="static/bootstrap-material-design/js/bootstrapMaterialDesign.js"></script>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="content">
+            <div>
+                <div class="jumbotron">
+                    <div class="container">
+                        <a class="btn btn-primary btn-lg">Nigeria Cohorts </a>
+
+                    </div>
+
+                </div>
+                <div class="offset-lg-1 col-lg-8 card">
+
+
+                    <table cellpadding="1" cellspacing="1" class="table table-striped">
+                        <tr>
+                            <th>cohort id
+                            </th>
+                            <th>location</th>
+                            <th>target</th>
+                            <th>Applicants</th>
+                        </tr>
+                        <tbody class='location'>
+                            <script id="location-template" type="text/x-handlebars-template">
+                                {{#each seed}}
+                                {{#if this.Applicants}}
+                                <tr>
+                                    <td>{{this.cohort}}</td>
+                                    <td>{{this.Location}}</td>
+                                    <td>{{this.target}}</td>
+                                    <td><a href="applicants.html">{{this.Applicants}}</a></td>
+                                </tr>
+                                {{/if}}
+                                {{/each}}
+                            </script>
+                        </tbody>
+
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="js/app.js"></script>
+
+</html>

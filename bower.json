@@ -1,0 +1,25 @@
+{
+  "name": "mock",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "alex mwaleh <alex.mwaleh@andela.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "static",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-material-design": "^4.0.2",
+    "handlebars": "^4.0.5",
+    "packery": "^2.1.1",
+    "jquery-ui": "^1.12.1",
+    "material-design-icons": "^3.0.1"
+  }
+}

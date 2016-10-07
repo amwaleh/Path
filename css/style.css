@@ -1,0 +1,94 @@
+.stats{
+	background-color: #fff;
+}
+div{
+	ss
+}
+.pull-right{
+	text-align: right;
+}
+table{
+	color:#42413d;
+}
+.header {
+	margin:20px;
+}
+.header h5 {
+
+	text-align: center;
+	font-family: helvetica;
+	font-weight:400;
+}
+th{
+	color:#005;
+}
+.jumbotron{
+	background:#139e91;
+	color:white;
+
+}
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid rgba(15, 186, 191, 0.13);
+}
+.form-group{
+	padding:30px;
+}
+form>.btn{
+	margin-top: 30px;
+}
+form.card{
+	min-height:350px;
+}
+.pull-left {
+  float: left !important;
+}
+.pull-right {
+  float: right !important;
+}
+.nav>.navbar-nav>ul>li{
+	display: inline-block;
+}
+#drop{
+	background-color: rgba(204, 204, 204, 0.33);
+	min-height: 200px;
+
+}
+#drop.element{
+background-color: green;
+}
+#drop{
+margin-bottom: 30px;
+
+}
+.grid-item>button{
+	transform:translate(0,-25px);
+}
+.menu>a{
+	font-size: 16px;
+	border-right:1px solid #fff;
+	padding:2px;
+	color:#467890;
+}
+.form{
+	display: block;
+}
+
+.tags {
+	width:50%;
+	float:right ;
+	color:lime;
+	background-color: silver;
+}
+.tool th{
+	text-align: right;
+}
+.thumb>img{
+width: 200px
+}
+.toolsheader{
+	text-align: center;
+	color : #06988a;
+font-weight: bold;
+}
