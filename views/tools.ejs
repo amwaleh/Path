@@ -2,200 +2,196 @@
 <html lang="en">
 
 <head>
-<% include ./partials/header %>
+    <% include ./partials/header %>
 
-   <script>
-   $(function(){
-      $('#draggable').draggable();
-   $('#droppable').droppable({
-     drop: function(event, ui){
-       $(this)
-       .addclass("ui-state-highlight")
-       .find('p')
-       .html("dropped");
-     }})})
-   </script>
-    <style>
-    #draggable{
-      width:120px;
-      height:120px;
+        <script>
+            $(function() {
+                $('#draggable').draggable();
+                $('#droppable').droppable({
+                    drop: function(event, ui) {
+                        $(this)
+                            .addclass("ui-state-highlight")
+                            .find('p')
+                            .html("dropped");
+                    }
+                })
+            })
+        </script>
+        <style>
+            #draggable {
+                width: 120px;
+                height: 120px;
+            }
 
-    }
-    #droppable{
-      width:120px;
-      height:120px;
-    }
-    .thumbnail {
-      width: 60px;
-      height: 60px;
-      border: 1px rgba(35, 111, 13, 0.32) solid;
-      box-shadow: 1px 1px 2px rgba(35, 111, 13, 0.9);
-      transform: translate(0,-20px);
-  }
-        .tools {
-            background-color: rgba(192, 197, 194, 0.16);
+            #droppable {
+                width: 120px;
+                height: 120px;
+            }
 
-        }
+            .thumbnail {
+                width: 60px;
+                height: 60px;
+                border: 1px rgba(35, 111, 13, 0.32) solid;
+                box-shadow: 1px 1px 2px rgba(35, 111, 13, 0.9);
+                transform: translate(0, -20px);
+            }
 
-        .grid-item {
-    margin: 5px;
-    width: 120px;
-    height: 120px;
-    font-size: 10px;
-    box-shadow: 1px 1px 1px;
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 12px;
-}
+            .tools {
+                background-color: rgba(192, 197, 194, 0.16);
+            }
 
-        .grid-item--width2 {
-            background-color: #cfc;
-            ;
-        }
-        .packery-drop-placeholder {
-  outline: 2px dashed #4c4;
-  outline-offset: -6px;
-  /* transition position changing */
-  -webkit-transition: -webkit-transform 0.2s;
-          transition: transform 0.2s;
-}
-.cat{
-  width:100%;
-height:30px;
+            .grid-item {
+                margin: 5px;
+                width: 120px;
+                height: 120px;
+                font-size: 10px;
+                box-shadow: 1px 1px 1px;
+                text-align: center;
+                margin-bottom: 20px;
+                margin-top: 12px;
+            }
 
-}
-    </style>
+            .grid-item--width2 {
+                background-color: #cfc;
+                ;
+            }
+
+            .packery-drop-placeholder {
+                outline: 2px dashed #4c4;
+                outline-offset: -6px;
+                /* transition position changing */
+                -webkit-transition: -webkit-transform 0.2s;
+                transition: transform 0.2s;
+            }
+
+            .cat {
+                width: 100%;
+                height: 30px;
+            }
+        </style>
 
 </head>
 
 <body>
 
+    <div class="container">
+        <div class="content">
 
-  <div class="container">
-    <div class="content">
+            <div>
+                <div class="jumbotron">
+                    <div class="container">
+                        <a class="btn btn-lg">Evaluation Tools </a>
+                        </p>
+                    </div>
+                </div>
+                </h2>
+            </div>
 
-      <div>
-          <div class="jumbotron">
-              <div class="container">
-                  <a class="btn btn-lg">Evaluation Tools </a>
-                  </p>
-              </div>
-          </div>
-          </h2>
-      </div>
 
-<div class="form">
-        <div class="gridp col-lg-12" id="drop" >
-          <label for=""> Add tools for Cohort tests</label>
-        </div>
+            <div class="grid" id="drop" data-packery='{ "itemSelector": ".grid-item" }'>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                ...
+            </div>
+<button class="btn test">click</button>
+            <script>
 
-        <!-- Button trigger modal -->
-        <a href="/toolsDescription"><button type="button" class="btn-success btn-lg " data-toggle="modal" data-target="#myModal">
+            </script>
+            <!-- Button trigger modal -->
+            <a href="/toolsDescription"><button type="button" class="btn-success btn-lg " data-toggle="modal" data-target="#myModal">
           add tool
         </button></a>
-<button type="button" class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myModal">
+            <button type="button" class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myModal">
   publish
 </button>
-</div>
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-        <h4 class="modal-title" id="myModalLabel">Cohort Tool selection</h4>
-      </div>
-      <div class="modal-body">
-      <h2>  staging summary</h2>
-      The following are the tool used in each stage:
-       chosen Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
-      1.  Eum dignissimos magni cum <br>
-      2.quo accusamus, quaerat earum blanditiis! <br>
-      3.  Corporis voluptates molestias ab rem cupiditate voluptatem eaque <br>
-      4.  asperiores mollitia? Eligendi mollitia, architecto.   <br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Publish Cohort</button>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="card col-lg-12 tools">
-    <script id="tools-template" type="text/x-handlebars-template">
-      {{#each tool}}
-      <div class="col-lg-12 category">
-      <h4>  {{@key}}</h4>
-        {{#each this}}
-        <div class="card grid-item col-lg-6 element ui-state-highlight" id="draggable">
-          <img src="images/{{this.profile}}" alt={{this.profile}} class="thumbnail img-circle">
-
-          <p>{{this.Tools}}<br>{{this.skill}} </p><br><button data-toggle="modal" data-target="#myModal2"   data-toggle="tooltip" title={{this.Description}}>add</button>
+                        <h4 class="modal-title" id="myModalLabel">Cohort Tool selection</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h2>  staging summary</h2> The following are the tool used in each stage: chosen Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> 1. Eum dignissimos magni cum <br> 2.quo accusamus, quaerat earum blanditiis! <br> 3. Corporis voluptates molestias
+                        ab rem cupiditate voluptatem eaque <br> 4. asperiores mollitia? Eligendi mollitia, architecto. <br>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Publish Cohort</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        {{/each}}
+        <div class="card col-lg-12 tools">
+            <script id="tools-template" type="text/x-handlebars-template">
+                {{#each tool}}
+                <div class="col-lg-12 category">
+                    <h4>  {{@key}}</h4> {{#each this}}
+                    <div class="card grid-item col-lg-6 element" id="draggable">
+                        <img src="images/{{this.Profile}}" alt={{this.Profile}} class="thumbnail img-circle">
+                        <p>{{this.Tools}}<br>{{this.skill}} </p><br><button data-toggle="modal" data-target="#myModal2" data-toggle="tooltip" title="{{this.Description}}">add</button>
+                    </div>
+                    {{/each}}
+                </div>
+
+                {{/each}}
+
+            </script>
+
+
         </div>
-
-      {{/each}}
-
-        </script>
-
-
-</div>
-<button type="button" class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myModal">
+        <button type="button" class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myModal">
   publish
 </button>
-</div>
-<!-- Modal -->
-<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-        <h4 class="modal-title" id="myModalLabel">Cohort Tool selection</h4>
-      </div>
-      <div class="modal-body col-lg-6">
-        <div class="app"></div>
-        <div class="description col-sm-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-           Modi ab, quaerat adipisci.
-           Illum esse enim error corporis facere quo ab,
-           placeat laborum pariatur laboriosam id nam debitis quisquam mollitia, modi.</div>
+                    <h4 class="modal-title" id="myModalLabel">Cohort Tool selection</h4>
+                </div>
+                <div class="modal-body col-lg-6">
+                    <div class="app"></div>
+                    <div class="description col-sm-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ab, quaerat adipisci. Illum esse enim error corporis facere quo ab, placeat laborum pariatur laboriosam id nam debitis quisquam mollitia, modi.</div>
 
-</div>
-      <div class="modal-form col-lg-5">
-      <h5>  Tools setting</h5>
-      <form action="" method="POST" role="form" class="card">
+                </div>
+                <div class="modal-form col-lg-5">
+                    <h5>  Tools setting</h5>
+                    <form action="" method="POST" role="form" class="card">
 
 
- <div class="form-group">
-   <label for="">start</label>
-   <input type="date" class="form-control" id="" >
- </div>
- <div class="form-group">
-   <label for="">end</label>
-   <input type="date" class="form-control" id="" >
- </div>
- <div class="form-group">
- 		<label for="">stage</label>
- 		<input type="number" class="form-control" id="" placeholder="Input field" min=0>
- 	</div>
-</form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Use tool</button>
-      </div>
+                        <div class="form-group">
+                            <label for="">start</label>
+                            <input type="date" class="form-control" id="">
+                        </div>
+                        <div class="form-group">
+                            <label for="">end</label>
+                            <input type="date" class="form-control" id="">
+                        </div>
+                        <div class="form-group">
+                            <label for="">stage</label>
+                            <input type="number" class="form-control" id="" placeholder="Input field" min=0>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Use tool</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-</div>
+    </div>
 
-    <script>
-    $( function() {
-     $( ".grid-item" ).draggable();
-   } );
-    </script>
+
 
 </body>
 

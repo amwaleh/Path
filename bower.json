@@ -20,6 +20,10 @@
     "handlebars": "^4.0.5",
     "packery": "^2.1.1",
     "jquery-ui": "^1.12.1",
-    "material-design-icons": "^3.0.1"
+    "material-design-icons": "^3.0.1",
+    "bootstrap-vertical-tabs": "^1.2.1"
+  },
+  "resolutions": {
+    "bootstrap": "v4-dev"
   }
 }

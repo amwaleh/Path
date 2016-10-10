@@ -8,13 +8,14 @@ $(document).ready(function(){
 
 
   var header =[
-    {href:"/createcohort",tag:"cycle"},
-    {href:"/applicants",tag:"applicants"},
-    {href:"/tools",tag:"tools"},
-    {href:"/candidate",tag:"candidate"},
-    {href:"/cycleAnalytics",tag:"analytic"}
+    {href:"\\",tag:"Home"},
+    {href:"/createcohort",tag:"Cycle"},
+    {href:"/applicants",tag:"Applicants"},
+    {href:"/toolsDescription",tag:"Tools"},
+    {href:"/candidate",tag:"Candidate"},
+    {href:"/cycleAnalytics",tag:"Analytics"}
   ];
-
+// create nav bar
   var nav ='<nav class="navbar navbar-light bg-faded navbar-fixed-top">' +
   '<div class="container">' +
       '<a class="navbar-brand" href="/">Paths</a>'+
@@ -26,8 +27,6 @@ $(document).ready(function(){
       '</script>'+
     '</div>'+
   '</nav>';
-
-
 $('body').prepend(nav);
 
 var source =$('#nav-template').html();
@@ -36,15 +35,14 @@ var context = {menu:header}
 var compiledHTML = template(context);
 $('.menu').html(compiledHTML );
 
-
+//compile candidate data
 var source = $("#entry-template").html() || '';
-// compile the template
 var template = Handlebars.compile(source);
 var context = {seedData : data || '' };
 var compiledHTML = template(context);
 $('.seed').html(compiledHTML);
 
-
+// compile location data
 source = $('#location-template').html() ||'';
 template = Handlebars.compile(source);
 var loco =seedLocation.map(function(item){
@@ -54,32 +52,44 @@ context = {seed:loco || ''};
 compiledHTML = template(context)
 $('.location').html(compiledHTML);
 
-
+// compile tools group by current usage
 source = $('#tools-template').html() ||'';
 template = Handlebars.compile(source);
-tools =_.chain(tools).groupBy('Current Usage').value();
+tools =_.chain(tools).groupBy('Source').value();
 context = {tool:tools};
 compiledHTML =template(context);
 console.log(context)
 $('.tools').html(compiledHTML);
 
+// actons for adding tool
 $(document).on('click','.element>button',function(){
   if($(this).html() =='remove'){
-    console.log('removed')
     $(this).parent().css('display','none');
   }
-  $(this).html('remove')
-  $('#myModal2>.modal-dialog>.modal-content>.modal-body>.app').html($(this).parent())
-  $('#myModal2>.modal-dialog>.modal-content>.modal-body>.description').html("''"+$(this).attr('tooltip')"'")
+  $(this).html('remove');
+  var a = $(this).attr('title')
+  $('#myModal2>.modal-dialog>.modal-content>.modal-body>.app').html($(this).parent());
+  $('#myModal2>.modal-dialog>.modal-content>.modal-body>.description').html(a);
   // $('#drop').append($(this).parent())
-  console.log($(this).attr('title'))
-
 });
+
+// add Tool to staging
 $(document).on('click','.modal-footer>.btn-primary', function(){
-  $('#drop').append(  $('#myModal2>.modal-dialog>.modal-content>.modal-body>.app').html())
+
+  var elem =  $('#myModal2>.modal-dialog>.modal-content>.modal-body>.app').html()
+  $grid.packery()
+  .append(elem)
+  .packery('appended', elem)
+  .packery().find('.grid-item').draggable()
 })
-// initialize Packery
-var $grid = $('#drop').packery({
+
+
+
+
+
+// Packery: initialize Packery
+
+var $grid = $('.grid').packery({
   itemSelector: '.grid-item',
   // columnWidth helps with drop positioning
   columnWidth: 100
@@ -97,14 +107,18 @@ $( itemElems ).each( function( i, itemElem ) {
 }
 $grid.on( 'layoutComplete', orderItems );
 $grid.on( 'dragItemPositioned', orderItems );
+// activate tooltip
+$('[data-toggle="tooltip"]').tooltip();
 
-$(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();
-});
-// ---------------------
+$(document).on("click",".test",function(){
+  var elem = " <div class='grid-item'></div>"
+  $grid.packery()
+  .append(elem)
+  .packery('appended', elem)
+  .packery().find('.grid-item').draggable()
 
-
-
+console.log($grid)
+})
 
 
 });
