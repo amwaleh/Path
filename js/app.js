@@ -66,16 +66,14 @@ $(document).on('click','.element>button',function(){
   if($(this).html() =='remove'){
     $(this).parent().css('display','none');
   }
-  $(this).html('remove');
+
   var a = $(this).attr('title')
   $('#myModal2>.modal-dialog>.modal-content>.modal-body>.app').html($(this).parent());
   $('#myModal2>.modal-dialog>.modal-content>.modal-body>.description').html(a);
-  // $('#drop').append($(this).parent())
 });
 
 // add Tool to staging
 $(document).on('click','.modal-footer>.btn-primary', function(){
-
   var elem =  $('#myModal2>.modal-dialog>.modal-content>.modal-body>.app').html()
   $grid.packery()
   .append(elem)
