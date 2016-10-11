@@ -1,7 +1,7 @@
 var path = require('path');
 var express = require('express');
 var app = express();
-var port = 3000;
+var port = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
 
@@ -37,6 +37,9 @@ app.set('view engine', 'ejs');
   });
   app.get('/toolsDescription', function (req, res) {
     res.render('toolsDes');
+  });
+  app.get('/toolchart', function (req, res) {
+    res.render('usage');
   });
 app.listen(port, '0.0.0.0', function onStart(err) {
   if (err) {
