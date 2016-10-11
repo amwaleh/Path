@@ -35,6 +35,7 @@
 
 <div class="col-lg-12 card">
 <h2 style="text-align:center; margin:10px">Installed tools</h2>
+  <% include ./partials/searchbar %>
 <div class=" col-lg-12 tools">
     <script id="tools-template" type="text/x-handlebars-template">
       {{#each tool}}
@@ -52,7 +53,7 @@
         <div class="source"> <i class="fa fa-plug" aria-hidden="true"></i> source: {{this.Source}}</div>
         <div class="source"><i class="fa fa-tags" aria-hidden="true"></i> Tags: technical, softskill {{this.skill}}</div>
         <div class="">
-        <a href="/toolchart"> <i class="fa fa-bar-chart" aria-hidden="true"></i> useage</a>
+        <a href="/toolchart"> <i class="fa fa-bar-chart" aria-hidden="true"></i> usage</a>
         </div>
         <div class="description">  <p>{{this.Description}}</p></div>
              </div>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ./partials/header %>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="jumbotron">
+                <div class="container">
+                    <a class="btn btn-primary btn-lg">Tool Usage data</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="chart-img col-lg-8 offset-lg-2">
+                <img src="/images/toolChart.png" alt="" width="100%">
+            </div>
+
+            <div class="chart">
+                <script id="chart-template" type="text/x-handlebars-template">
+                    <div class="chartData col-lg-8 offset-lg-2 card">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    {{#each keys}}
+                                    <th>{{this}}</th>
+                                    {{/each}}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each chartData}}
+                                <tr>
+                                    {{#each this}}
+                                    <td> {{this}}</td>
+                                    {{/each}}
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
