@@ -42,7 +42,7 @@
             </div>
 
             <!-- Button trigger modal -->
-            <a href="/toolsDescription"><button type="button" class="btn-success btn-lg " data-toggle="modal" data-target="#myModal">
+            <a href="/toolsDescription"><button type="button" class="btn-primary btn-lg pull-right" >
           add tool
         </button></a>
             <button type="button" class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myModal">
@@ -57,15 +57,18 @@
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-                        <h4 class="modal-title" id="myModalLabel">Cohort Tool selection</h4>
+                        <h4 class="modal-title" id="myModalLabel">Cycle Tool selection</h4>
                     </div>
                     <div class="modal-body">
-                        <h2>  staging summary</h2> The following are the tool used in each stage: chosen Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> 1. Eum dignissimos magni cum <br> 2.quo accusamus, quaerat earum blanditiis! <br> 3. Corporis voluptates molestias
-                        ab rem cupiditate voluptatem eaque <br> 4. asperiores mollitia? Eligendi mollitia, architecto. <br>
+                        <h2>  staging summary</h2>
+                        <p>The following is a summary of tools to be used in this cycle</p>
+                        <ul class="stage list-group">
+
+                      </ul>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Publish Cohort</button>
+                        <button type="button" class="btn btn-primary live">Make cycle Live!!</button>
                     </div>
                 </div>
             </div>
@@ -77,8 +80,7 @@
                     <h4>  {{@key}}</h4> {{#each this}}
                     <div class="card grid-item col-lg-6 element" id="draggable">
                         <img src="images/{{this.Profile}}" alt={{this.Profile}} class="thumbnail img-circle">
-
-                        <br><button data-toggle="modal" data-target="#myModal2" data-toggle="tooltip" title="{{this.Description}}" class="btn btn-success">add</button>
+                        <br><button data-toggle="modal" data-target="#myModal2" data-toggle="tooltip" title="{{this.Description}}" class="btn btn-primary"> add</button>
 
                         <p>{{this.Tools}} </p>
 
@@ -92,9 +94,6 @@
 
 
         </div>
-        <button type="button" class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myModal">
-  publish
-</button>
     </div>
     <!-- Modal -->
     <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -104,11 +103,14 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-                    <h4 class="modal-title" id="myModalLabel">Cohort Tool selection</h4>
+                    <h4 class="modal-title" id="myModalLabel">Cycle Tool selection</h4>
                 </div>
                 <div class="modal-body col-lg-6">
                     <div class="app"></div>
-                    <div class="description col-sm-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ab, quaerat adipisci. Illum esse enim error corporis facere quo ab, placeat laborum pariatur laboriosam id nam debitis quisquam mollitia, modi.</div>
+                    <div class="description col-sm-12">Lorem ipsum dolor sit amet, consectetur
+                      adipisicing elit. Modi ab, quaerat adipisci. Illum esse enim error
+                      corporis facere quo ab, placeat laborum pariatur
+                       laboriosam id nam debitis quisquam mollitia, modi.</div>
 
                 </div>
                 <div class="modal-form col-lg-5">

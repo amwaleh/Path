@@ -38,6 +38,9 @@ app.set('view engine', 'ejs');
   app.get('/toolsDescription', function (req, res) {
     res.render('toolsDes');
   });
+  app.get('/toolchart', function (req, res) {
+    res.render('useage');
+  });
 app.listen(port, '0.0.0.0', function onStart(err) {
   if (err) {
     console.log(err);

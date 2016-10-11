@@ -382,15 +382,23 @@ section .active + ul {
 }
 .grid-item button{
 	font-size: 10px;
-	border: solid #ccc 1px;
 	padding:2px;
 	transform:translate(-10px);
 	position:absolute;
 	bottom: 0;
+
 }
 .grid-item p{
 	height:30px;
 	 white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+.pie-image{
+	margin: 5px;
+}
+.logo{
+	width:32px;
+	float:left;
+	margin-right:10px;
 }
